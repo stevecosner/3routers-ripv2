@@ -1,0 +1,65 @@
+#configuration for R1
+#start in the config mode
+
+hostname R1
+int lo 0
+ip address 1.1.1.1 255.255.255.255
+exit
+int g0/0/0
+no shut
+ip address 10.1.1.1 255.255.255.252
+exit
+router rip
+version 2
+no auto-summary
+network 1.0.0.0
+network 10.0.0.0
+end
+wr
+
+
+#configuration for R2
+
+
+hostname R2
+int lo 0
+ip address 2.2.2.2 255.255.255.255
+exit
+int g0/0/0
+no shut
+ip address 10.1.1.2 255.255.255.252
+exit
+int g0/0/1
+no shut
+ip address 10.1.1.5 255.255.255.252
+router rip
+version 2
+no auto-summary
+network 2.0.0.0
+network 10.0.0.0
+end
+wr
+
+
+
+#configuration for R3
+
+
+hostname R3
+int lo 0
+ip address 3.3.3.3 255.255.255.255
+exit
+int g0/0/0
+no shut
+ip address 10.1.1.6 255.255.255.252
+exit
+router rip
+version 2
+no auto-summary
+network 3.0.0.0
+network 10.0.0.0
+end
+wr
+
+
+
