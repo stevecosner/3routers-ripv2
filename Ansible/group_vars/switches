@@ -1,5 +1,0 @@
----
-ansible_network_os: ios
-ansible_user: steve
-ansible_ssh_pass: admin
-
