@@ -1,0 +1,6 @@
+---
+
+- name: write interfaces config
+  ios_config:
+    src: "templates/router.j2"
+  register: result

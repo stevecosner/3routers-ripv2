@@ -1,0 +1,13 @@
+
+int lo 0
+ ip address 3.3.3.3 255.255.255.255
+!
+int s1/0
+ ip address 10.1.1.6 255.255.255.252
+!
+router rip
+ version 2
+ no auto-summary
+ network 3.0.0.0
+ network 10.0.0.0
+

@@ -1,0 +1,21 @@
+---
+
+- name: Add loopback   
+  ios_config:
+    lines: Description Pro Main Loopback 0
+    parents: int loopback 0
+    
+- name: Add Matt
+  ios_config:
+    lines: username matt password admin
+
+- name: Show Run
+  ios_command:
+    commands: show run
+    
+  register: interface
+
+- debug: var=interface.stdout_lines       
+
+
+

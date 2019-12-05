@@ -1,0 +1,8 @@
+---
+
+- name: Change Hostname   
+  ios_config:
+    lines: hostname R1
+
+
+
