@@ -1,11 +1,27 @@
 ---
-- hosts: routers
+
+- hosts: R1
   gather_facts: no
   connection: network_cli
 
-  
   roles:
+  
    - R1
+
+- hosts: R2
+  gather_facts: no
+  connection: network_cli
+
+  roles:
+
    - R2
-   - R3             
+
+- hosts: R3
+  gather_facts: no
+  connection: network_cli
+
+  roles:
+
+   - R3
+  
      
